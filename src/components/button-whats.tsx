@@ -1,9 +1,23 @@
+"use client";
 import { Icon } from "@iconify/react";
 
-export default function Whatsapp(){
-    return(
-        <div className="absolute bottom-0 left-0 bg-green-400">
-            <Icon icon="ic:baseline-whatsapp" width="24" height="24" />
-        </div>
-    )
+export default function Whatsapp() {
+  const handleClick = () => {
+    window.open("https://wa.me/5491123456789", "_blank");
+  };
+
+  return (
+    <button
+      title="Whats Button"
+      onClick={handleClick}
+      className="bottom-7 fixed right-7 p-2 w-fit max-h-fit rounded-full bg-green-400"
+    >
+      <Icon
+        icon="ic:baseline-whatsapp"
+        className="text-white "
+        width="24"
+        height="24"
+      />
+    </button>
+  );
 }

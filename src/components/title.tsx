@@ -15,7 +15,9 @@ const ShinyText = ({
 
   return (
     <div
-      className={`shiny-text ${disabled ? "disabled" : ""} ${className}`}
+      className={`shiny-text text-center bg-red-600 ${
+        disabled ? "disabled" : ""
+      } ${className}`}
       style={{ animationDuration }}
     >
       {text}
