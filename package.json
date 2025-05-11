@@ -12,6 +12,7 @@
     "@tabler/icons-react": "^3.31.0",
     "clsx": "^2.1.1",
     "gsap": "^3.13.0",
+    "lucide-react": "^0.509.0",
     "motion": "^12.10.5",
     "next": "15.3.2",
     "react": "^19.0.0",
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@iconify/react": "^4.1.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

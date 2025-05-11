@@ -37,8 +37,10 @@ export default function ProductosPages() {
           animationStepDuration={0.4}
           className="custom-pixel-card"
         />
+
+
         <ReviewComponents
-          items={testimonials}/>
+          items={testimonials} className=""/>
         <ShinyText text="Productos" speed={5} className="text-6xl font-bold" />
       </div>
       <div></div>
@@ -51,31 +53,31 @@ export default function ProductosPages() {
 const testimonials = [
   {
     quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
+      "“¡Excelente servicio! El pedido llegó incluso antes de lo esperado y todo venía muy bien empacado. Sin duda volveré a comprar. ¡Recomendado al 100%!”",
+    name: " Camila R.",
     title: "A Tale of Two Cities",
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
+      "“Buena calidad y variedad de productos. La atención al cliente fue rápida y resolvieron mi duda en minutos. Solo le bajo una estrella porque una prenda venía con la talla equivocada, pero la cambiaron sin problema.”",
+    name: "Andrés M.",
     title: "Hamlet",
   },
   {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
+    quote: "“Me encantó la experiencia de compra. La web es muy intuitiva y encontré justo lo que buscaba. Además, tienen muchas promociones. ¡Ya tengo mi carrito lleno para la próxima compra!”",
+    name: "Mariana L.",
     title: "A Dream Within a Dream",
   },
   {
     quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
+      "La entrega se demoró un poco más de lo prometido, pero los productos llegaron en buen estado. Podrían mejorar el seguimiento del envío.",
+    name: "Julián V.",
     title: "Pride and Prejudice",
   },
   {
     quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
+      "“Increíble. Pedí unos accesorios para el celular y llegaron impecables. Todo original y a muy buen precio. ¡Definitivamente volveré a comprar aquí!”",
+    name: "Natalia G.",
     title: "Moby-Dick",
   },
 ];
