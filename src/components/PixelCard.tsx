@@ -125,12 +125,10 @@ function PixelTransition({
         bg-[#222]
         text-white
         rounded-[15px]
-        border-2
-        border-white
-        w-[300px]
+        overflow-hidden
         max-w-full
         relative
-        overflow-hidden
+
       `}
       style={style}
       onMouseEnter={!isTouchDevice ? handleMouseEnter : undefined}
