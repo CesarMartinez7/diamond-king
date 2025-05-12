@@ -11,23 +11,28 @@ export default function Home() {
         <Spotlight />
         <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0 flex justify-center flex-col items-centerc">
           <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-            Tdiamond King
+            Diamond King
             <br /> which was made for kings
           </h1>
 
           <ShinyText
-            className="mx-auto mt-4 text-center bg-red-400 "
+            className="mx-auto mt-4 text-center bg-red-400 text-xs md:text-base "
             text="Estilo audaz. Actitud real. Viste como un rey"
           ></ShinyText>
         </div>
       </div>
 
-      <div className="h-svh py-2 w-full">
+      <div className="h-svh py-2 w-full ">
+        <h1 className="text-4xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+        ¿Por qué elegir Diamond King?
+        </h1>
         <LayoutGrid cards={cards} />
       </div>
 
-      <div className=" flex justify-center items-center flex-col ">
-        <h3 className="text-primary-text font-semibold text-2xl ⭐ ">Reviews</h3>
+      <div className="  flex-col  flex justify-center items-center min-h-[50svh] ">
+        <h3 className="text-primary-text font-semibold text-2xl ⭐ ">
+          Reviews
+        </h3>
         <ReviewComponents items={testimonials} />
       </div>
     </div>
@@ -38,12 +43,12 @@ const SkeletonOne = () => {
   return (
     <div>
       <p className="font-bold md:text-4xl text-xl text-white">
-        House in the woods
+        Diseño con propósito
       </p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A serene and tranquil retreat, this house in the woods offers a peaceful
-        escape from the hustle and bustle of city life.
+        No solo vestimos cuerpos, vestimos actitudes. Cada prenda tiene un
+        mensaje.
       </p>
     </div>
   );
@@ -53,13 +58,11 @@ const SkeletonTwo = () => {
   return (
     <div>
       <p className="font-bold md:text-4xl text-xl text-white">
-        House above the clouds
+        🚀 Calidad que impulsa
       </p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        Perched high above the world, this house offers breathtaking views and a
-        unique living experience. It&apos;s a place where the sky meets home,
-        and tranquility is a way of life.
+        Usamos materiales premium que garantizan durabilidad y comodidad.
       </p>
     </div>
   );
@@ -68,12 +71,11 @@ const SkeletonThree = () => {
   return (
     <div>
       <p className="font-bold md:text-4xl text-xl text-white">
-        Greens all over
+        🌌 Estilo que trasciende
       </p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house surrounded by greenery and nature&apos;s beauty. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+        Ropa pensada para destacar, desde el street hasta lo sofisticado.
       </p>
     </div>
   );
@@ -82,12 +84,12 @@ const SkeletonFour = () => {
   return (
     <div>
       <p className="font-bold md:text-4xl text-xl text-white">
-        Rivers are serene
+        💎 Hecho para reyes
       </p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house by the river is a place of peace and tranquility. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+        ICada prenda está diseñada para que sientas seguridad, presencia y
+        poder.
       </p>
     </div>
   );

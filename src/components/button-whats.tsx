@@ -10,13 +10,13 @@ export default function Whatsapp() {
     <button
       title="Whats Button"
       onClick={handleClick}
-      className="bottom-7 fixed right-7 p-2 w-fit max-h-fit rounded-full bg-green-400"
+      className="bottom-7 animate-bounce fixed right-7 p-2 w-fit max-h-fit rounded-full bg-green-400"
     >
       <Icon
         icon="ic:baseline-whatsapp"
         className="text-white "
-        width="24"
-        height="24"
+        width="38"
+        height="38"
       />
     </button>
   );

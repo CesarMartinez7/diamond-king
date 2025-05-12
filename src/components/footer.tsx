@@ -2,17 +2,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import ShinyText from "./title";
 
 export function Footer() {
   return (
     <footer>
-      <footer className="border-t  mt-16 py-8 text-primary-text">
+      <footer className=" mt-16 py-8 text-primary-text">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center space-y-6">
             {/* Logo */}
             <div className="w-16 h-16 relative">
               <Image
-                src="/placeholder.svg?height=64&width=64"
+                src={"/dk.png"}
                 alt="Logo MARCA"
                 width={64}
                 height={64}
@@ -22,8 +23,8 @@ export function Footer() {
 
             {/* Nombre/Marca */}
             <div className="text-center">
-              <h3 className="font-bold text-xl">MARCA</h3>
-              <p className="text-sm  mt-1">Lorem ipsum dolor sit.</p>
+              <h3 className="font-bold text-xl">Diamond King</h3>
+              <ShinyText text="Ropa pensada para destacar, desde el street hasta lo sofisticado." />
             </div>
 
             {/* Redes sociales */}
