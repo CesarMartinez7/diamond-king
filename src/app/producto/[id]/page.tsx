@@ -1,9 +1,8 @@
 "use client";
 import Image from "next/image";
-import { Heart, ShoppingBag, Star } from "lucide-react";
+import { Heart, ShoppingBag } from "lucide-react";
 import ShinyText from "@/components/title";
 import PixelTransition from "@/components/PixelCard";
-import { useEffect } from "react";
 import Whatsapp from "@/components/button-whats";
 
 const imagesArray = [
