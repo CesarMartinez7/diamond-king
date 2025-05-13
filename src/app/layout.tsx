@@ -5,7 +5,8 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Whatsapp from "@/components/button-whats";
 import { Footer } from "@/components/footer";
-import { NavbarDemo } from "@/components/navbar";
+import NavbarClassic from "@/components/navbar-clasic";
+// import { NavbarDemo } from "@/components/navbar";
 
 
 const UbuntuFont = Montserrat({
@@ -26,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${UbuntuFont.className} fade-in antialiased relative`}>
-        <NavbarDemo />
+        <NavbarClassic/>
         {children}
         <Whatsapp />
         <Footer />
