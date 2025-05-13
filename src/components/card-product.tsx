@@ -24,10 +24,10 @@ export default function CardProduct({ keyItem, classNameCard, altImage, urlImage
                 />
             </div>
             <div className="p-4">
-                <motion.h3 className="font-medium text-xs md:text-sm truncate duration-300 text-primary-text" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}   >
+                <motion.h3 className="font-medium text-xs md:text-sm truncate duration-300 text-primary-text"    >
                     {name}
                 </motion.h3>
-                <p className="text shiny-text"> € {price}</p>
+                <p className="text-white  text-xs"> € {price}</p>
             </div>
         </div>
     )

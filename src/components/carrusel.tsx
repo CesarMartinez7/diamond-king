@@ -67,7 +67,7 @@ const Carousel: React.FC<CarouselProps> = ({
   }
 
   return (
-    <div className={`relative w-full h-[100svh] overflow-hidden rounded-lg ${className}`}>
+    <div className={`relative w-full xl:h-[70svh] 2xl:h-[70svh] h-72 overflow-hidden rounded-lg ${className}`}>
       {/* Controles de navegación */}
       {showControls && (
         <>
