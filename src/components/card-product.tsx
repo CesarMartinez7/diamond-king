@@ -27,7 +27,7 @@ export default function CardProduct({ keyItem, classNameCard, altImage, urlImage
                 <motion.h3 className="font-medium text-xs md:text-sm truncate duration-300 text-primary-text" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}   >
                     {name}
                 </motion.h3>
-                <p className="text shiny-text font-semibold "> € {price}</p>
+                <p className="text shiny-text"> € {price}</p>
             </div>
         </div>
     )
