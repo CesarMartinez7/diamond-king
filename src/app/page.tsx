@@ -1,16 +1,41 @@
-import { Spotlight } from "@/components/spotlight-new";
-import ShinyText from "@/components/title";
+
 import { ReviewComponents } from "@/components/review";
 import { LayoutGrid } from "@/components/layout-grid";
 import { testimonials } from "@/components/review";
 import CardProduct from "@/components/card-product";
+import React from 'react';
+import Carousel from "@/components/carrusel";
 
+const App: React.FC = () => {
+  const items = [
+    "/PRESET/FOT_0026.jpg",
+    "/PRESET/FOT_0044.jpg",
+    "/PRESET/FOT_0047.jpg",
+    "/PRESET/FOT_0049.jpg",
+    <div key={crypto.randomUUID()} className="h-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+      <h2 className="text-4xl font-bold text-white">Slide Personalizado</h2>
+    </div>,
+    <div key={crypto.randomUUID()} className="h-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+      <h2 className="text-4xl font-bold text-white">Slide Personalizado</h2>
+    </div>
+  ];
 
+  return (
+    <Carousel
+      items={items}
+      autoPlay={true}
+      interval={4000}
+      showIndicators={true}
+      showControls={true}
+      className="shadow-xl mt-24"
+    />
+  );
+};
 
 export default function Home() {
   return (
     <div className="p-4">
-      <div className="h-svh w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+      {/* <div className="h-svh w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
         <Spotlight />
         <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0 flex justify-center flex-col items-centerc">
           <h1 className="text-2xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
@@ -23,21 +48,24 @@ export default function Home() {
             text="Estilo audaz. Actitud real. Viste como un rey"
           ></ShinyText>
         </div>
+      </div> */}
+      <div>
+        <App></App>
       </div>
 
 
-    <div className="w-full min-h-svh container mx-auto px-4 py-8 ">
-      <div className="contain-content grid grid-cols-2 md:grid-cols-5 gap-4">
-        {imagesArray.map((item) => (
-          <CardProduct key={item.key} keyItem={item.key} altImage={item.alt} urlImage={item.url} name={item.name} price={item.price}  />
-        ))}
+      <div className="w-full min-h-svh container mx-auto px-4 py-8 ">
+        <div className="contain-content grid grid-cols-2 md:grid-cols-5 gap-4">
+          {imagesArray.map((item) => (
+            <CardProduct key={item.key} keyItem={item.key} altImage={item.alt} urlImage={item.url} name={item.name} price={item.price} />
+          ))}
+        </div>
       </div>
-    </div>
 
 
       <div className="h-svh py-2 w-full ">
         <h1 className="text-4xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-        ¿Por qué elegir Diamond King?
+          ¿Por qué elegir Diamond King?
         </h1>
         <LayoutGrid cards={cards} />
       </div>
