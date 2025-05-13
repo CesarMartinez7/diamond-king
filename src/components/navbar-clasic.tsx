@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import { AnimatedSubscribeButton } from "./animated-favorite-button";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import Link from "next/link";
 
 
 
@@ -41,27 +42,29 @@ export default function NavbarClassic() {
 
 
     return (
-        <div className={`flex flex-1 z-[999] transition-all items-center duration-500 justify-between ${isScrolledTop ? "bg-black text-neutral-400" : " text-neutral-200 backdrop-blur-xl transition-all shadow-2xl shadow-white/15"}  fixed w-full z-40 md:px-12 `}   >
-            <div className="z-40">
-                <Image src={"/dk.png"} alt="dsd" className="h-20 " width={100} height={20} />
-            </div>
+        <div className={`flex flex-1 z-50 transition-all items-center duration-500 justify-between ${isScrolledTop ? "bg-black text-neutral-400 border-primary-border" : "text-neutral-200 backdrop-blur-xl transition-all shadow-2xl shadow-white/15"} text-sm fixed w-full z-40 md:px-12 `}   >
+            <Link href={"/"} className="z-40">
+                <Image src={"/dk.png"} alt="dsd"  width={80} className="h-[70px]" height={12} />
+            </Link>
             <nav className="md:hidden lg:hidden xl:flex hidden gap-6 absolute top-1/2 left-1/2 m-0 -translate-y-1/2 -translate-x-1/2">
             <div className="bg-red-500 h-full w-2.5" ></div>
                 {navItems.map((nav, idx) => (
-                    <a key={idx} className="">{nav.name}</a>
+                    <Link className="cursor-pointer hover:bg-primary-hover transition-all duration-200 p-2 rounded-md" key={idx} href={nav.link} >{nav.name} </Link>
                 ))}
             </nav>
 
             <div className="flex flex-row gap-2  justify-center items-center">
                 <div className="w-full max-w-sm min-w-[100px] rounded-md relative border border-[#2d2d2d] ">
                     <form >
-                        <input type="text" className="w-full p-2 bg-transparent text-sm   rounded-md border-border transition duration-300 ease focus:outline-none shadow-sm focus:shadow" placeholder="Camiseta Premiun..." />
+                        <input type="text" className="w-full p-2 bg-transparent text-sm   rounded-md border-border transition duration-300 ease focus:outline-none shadow-sm focus:shadow hover:scale-95" placeholder="Camiseta Premiun..." />
                     </form>
-
-
                 </div>
                 <AnimatedSubscribeButton className="bg-white text-black w-1.5">
                     <span><Icon icon="tabler:search" width="15" height="14" /></span><span>..</span>
+                </AnimatedSubscribeButton>
+                <AnimatedSubscribeButton className="bg-white text-black w-1.5 2xl:hidden xl:hidden lg:hidden">
+                    <span><Icon icon="tabler:menu-2" width="14" height="14" /></span>
+                    <span><Icon icon="tabler:x" width="16" height="16" /></span>
                 </AnimatedSubscribeButton>
             </div>
         </div>

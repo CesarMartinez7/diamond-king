@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${UbuntuFont.className} fade-in antialiased relative`}>
+      <body className={`${UbuntuFont.className}  antialiased relative fade`}>
         <NavbarClassic/>
         {children}
         <Whatsapp />

@@ -28,7 +28,7 @@ const imagesArray = [
 
 export default function ProductoPage() {
   return (
-    <div className="container mx-auto px-4 py-8 text-[#AEAEAE] min-h-screen">
+    <div className="container mx-auto px-4 py-8 text-primary-text  min-h-screen ">
       <Whatsapp />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8  min-h-svh place-content-center">
         {/* Galería de imágenes */}
@@ -139,7 +139,7 @@ export default function ProductoPage() {
               {["XS", "S", "M", "L", "XL"].map((size, i) => (
                 <button
                   key={i}
-                  className={`py-2 border  bg-[#171717] text-xs  min-w-[48px]  rounded-full border-[#737373] `}
+                  className={`py-2 border text-xs  min-w-[48px] rounded-full border-primary-border `}
                 >
                   {size}
                 </button>
@@ -149,12 +149,12 @@ export default function ProductoPage() {
 
           {/* Botones de acción */}
           <div className="grid grid-cols-2 gap-4">
-            <button className=" bg-[#111111] border-[#303030] duration-200 hover:border-b-5 p-2 flex justify-center items-center rounded  border gap-2 ">
+            <button className="  border-primary-border duration-200 hover:border-b-5 p-2 flex  justify-center items-center rounded  border gap-2 ">
               <Icon icon="tabler:building-store" width="24" height="24" />
-              <span className="shiny-text">Comprar</span>
+              <span >Comprar</span>
             </button>
             <AnimatedSubscribeButton className="bg-white text-black font-light w-full">
-              <span className="inline-flex gap-2 justify-center items-center font-light">
+              <span className="inline-flex gap-2 justify-center items-center font-light text-sm">
                 <Icon icon="tabler:heart" width="20" height="20" />
                 Añadir storage
               </span>
@@ -162,13 +162,13 @@ export default function ProductoPage() {
             </AnimatedSubscribeButton>
           </div>
           <Accordion>
-            <AccordionItem className="text-start text-sm border-b" key="1" aria-label="Accordion 1" title="Descripcion">
+            <AccordionItem className="text-start text-sm border-b border-primary-border" key="1" aria-label="Accordion 1" title="Descripcion">
             Esta camiseta de algodón premium está diseñada para ofrecer máxima comodidad y estilo ✨. El tejido de alta calidad garantiza durabilidad y una sensación suave al tacto 🚀. Perfecta para el uso diario o para ocasiones especiales ⭐.
             </AccordionItem>
-            <AccordionItem key="2" className="border-b text-sm" aria-label="Accordion 2" title="Detalles">
+            <AccordionItem key="2" className="border-b text-sm border-primary-border" aria-label="Accordion 2" title="Detalles">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit consequuntur ipsa laborum obcaecati non cum fuga beatae error corporis assumenda!
             </AccordionItem>
-            <AccordionItem className="border-b text-sm" key="3" aria-label="Accordion 3" title="Envio">
+            <AccordionItem className="border-b text-sm border-primary-border" key="3" aria-label="Accordion 3" title="Envio">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, nisi!
             </AccordionItem>
           </Accordion>

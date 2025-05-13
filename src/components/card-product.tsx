@@ -14,7 +14,7 @@ interface CardProductProps {
 
 export default function CardProduct({ keyItem, classNameCard, altImage, urlImage, name, price }: CardProductProps) {
     return (
-        <div key={keyItem} className={` overflow-hidden ${classNameCard} `}>
+        <div key={keyItem} className={` overflow-hidden ${classNameCard} rounded-xs `}>
             <div className="relative aspect-square">
                 <Image
                     src={urlImage}
@@ -24,7 +24,7 @@ export default function CardProduct({ keyItem, classNameCard, altImage, urlImage
                 />
             </div>
             <div className="p-4">
-                <motion.h3 className="font-medium truncate duration-300 text-primary-text" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}   >
+                <motion.h3 className="font-medium text-xs md:text-sm truncate duration-300 text-primary-text" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}   >
                     {name}
                 </motion.h3>
                 <p className="text shiny-text font-semibold "> € {price}</p>
