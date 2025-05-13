@@ -27,7 +27,7 @@ export default function Home() {
 
 
     <div className="w-full min-h-svh container mx-auto px-4 py-8 ">
-      <div className="contain-content grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="contain-content grid grid-cols-2 md:grid-cols-5 gap-4">
         {imagesArray.map((item) => (
           <CardProduct key={item.key} keyItem={item.key} altImage={item.alt} urlImage={item.url} name={item.name} price={item.price}  />
         ))}

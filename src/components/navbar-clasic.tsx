@@ -25,8 +25,8 @@ const navItems = [
 export default function NavbarClassic() {
 
     const [isScrolledTop, setIsScrolledTop] = useState<boolean>(true)
-    const [valueInput, setValueInput] = useState<string>('');
-    const [isOpenInput, setIsOpenIput] = useState<boolean>(false)
+    // const [valueInput, setValueInput] = useState<string>('');
+    // const [isOpenInput, setIsOpenIput] = useState<boolean>(false)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -41,7 +41,7 @@ export default function NavbarClassic() {
 
 
     return (
-        <div className={`flex flex-1 transition-all items-center duration-500 justify-between ${isScrolledTop ? "bg-black text-neutral-400" : " text-neutral-200 backdrop-blur-xl transition-all shadow-2xl shadow-white/15"}  fixed w-full z-40 md:px-12 `}   >
+        <div className={`flex flex-1 z-[999] transition-all items-center duration-500 justify-between ${isScrolledTop ? "bg-black text-neutral-400" : " text-neutral-200 backdrop-blur-xl transition-all shadow-2xl shadow-white/15"}  fixed w-full z-40 md:px-12 `}   >
             <div className="z-40">
                 <Image src={"/dk.png"} alt="dsd" className="h-20 " width={100} height={20} />
             </div>

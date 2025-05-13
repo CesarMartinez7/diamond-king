@@ -6,6 +6,7 @@ import PixelTransition from "@/components/PixelCard";
 import Whatsapp from "@/components/button-whats";
 import CardProduct from "@/components/card-product";
 import { AnimatedSubscribeButton } from "@/components/animated-favorite-button";
+import { Accordion, AccordionItem } from "@heroui/accordion";
 const imagesArray = [
   {
     name: "dsf",
@@ -74,8 +75,8 @@ export default function ProductoPage() {
             />
             {/* */}
           </div>
-          <div className="grid grid-cols-4 gap-2">
-            {imagesArray.map((image,idx) => (
+          <div className="grid grid-cols-5 gap-2">
+            {imagesArray.map((image, idx) => (
               <div
                 key={idx}
                 className="relative aspect-square cursor-pointer overflow-hidden rounded-md"
@@ -148,47 +149,38 @@ export default function ProductoPage() {
 
           {/* Botones de acción */}
           <div className="grid grid-cols-2 gap-4">
-            <button className="px-8 py-2  rounded-md w-full justify-center-safe items-center-safe flex bg-gradient-to-b from-blue-500 to-blue-600 text-white focus:ring-2 focus:ring-blue-400 hover:shadow-xl transition duration-200 ">
-              Añadir al Carrito
+            <button className=" bg-[#111111] border-[#303030] duration-200 hover:border-b-5 p-2 flex justify-center items-center rounded  border gap-2 ">
+              <Icon icon="tabler:building-store" width="24" height="24" />
+              <span className="shiny-text">Comprar</span>
             </button>
-            <AnimatedSubscribeButton className="bg-[#171717] text-white/70 w-full">
-              <span>Añadir storage
-                <Icon icon="tabler:heart" width="24" height="24" />
+            <AnimatedSubscribeButton className="bg-white text-black font-light w-full">
+              <span className="inline-flex gap-2 justify-center items-center font-light">
+                <Icon icon="tabler:heart" width="20" height="20" />
+                Añadir storage
               </span>
               <span>Eliminar storage</span>
             </AnimatedSubscribeButton>
           </div>
-
-          {/* Información adicional */}
-          <hr className="my-2 border-t border-dashed " />
-
-          {/* Tabs simples */}
-          <div className="space-y-4">
-            <div className="grid grid-cols-3 border-b border-dashed ">
-              <button className="py-2 border-b-2 border-black font-medium">
-                Descripción
-              </button>
-              <button className="py-2 ">Detalles</button>
-              <button className="py-2 ">Envío</button>
-            </div>
-            <div className="pt-4">
-              <p className="text-sm ">
-                👕 Esta camiseta de algodón premium está diseñada para ofrecer
-                máxima comodidad y estilo ✨. El tejido de alta calidad
-                garantiza durabilidad y una sensación suave al tacto 🚀.
-                Perfecta para el uso diario o para ocasiones especiales ⭐.
-              </p>
-            </div>
-          </div>
+          <Accordion>
+            <AccordionItem className="text-start text-sm border-b" key="1" aria-label="Accordion 1" title="Descripcion">
+            Esta camiseta de algodón premium está diseñada para ofrecer máxima comodidad y estilo ✨. El tejido de alta calidad garantiza durabilidad y una sensación suave al tacto 🚀. Perfecta para el uso diario o para ocasiones especiales ⭐.
+            </AccordionItem>
+            <AccordionItem key="2" className="border-b text-sm" aria-label="Accordion 2" title="Detalles">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit consequuntur ipsa laborum obcaecati non cum fuga beatae error corporis assumenda!
+            </AccordionItem>
+            <AccordionItem className="border-b text-sm" key="3" aria-label="Accordion 3" title="Envio">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, nisi!
+            </AccordionItem>
+          </Accordion>
         </div>
       </div>
 
       {/* Productos relacionados */}
       <div className="mt-16">
         <h2 className="text-2xl font-bold mb-6">También te puede gustar</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           {imagesArray.map((i) => (
-            <CardProduct key={crypto.randomUUID()}  keyItem={crypto.randomUUID()} altImage={i.name} urlImage={i.url} name={i.name} price={i.name} />
+            <CardProduct key={crypto.randomUUID()} keyItem={crypto.randomUUID()} altImage={i.name} urlImage={i.url} name={i.name} price={i.name} />
           ))}
         </div>
       </div>
