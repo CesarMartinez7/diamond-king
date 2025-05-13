@@ -9,7 +9,7 @@ export function Footer() {
     <footer>
       <footer className=" mt-16 py-8 text-primary-text">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center justify-center space-y-6">
+          <div className="flex flex-col items-center justify-center space-y-1">
             {/* Logo */}
             <div className="w-16 h-16 relative">
               <Image
@@ -23,8 +23,8 @@ export function Footer() {
 
             {/* Nombre/Marca */}
             <div className="text-center">
-              <h3 className="font-bold text-xl">Diamond King</h3>
-              <ShinyText text="Ropa pensada para destacar, desde el street hasta lo sofisticado." />
+              <h3 className="font-bold">Diamond King</h3>
+              <ShinyText className="text-xs" text="Ropa pensada para destacar, desde el street hasta lo sofisticado." />
             </div>
 
             {/* Redes sociales */}

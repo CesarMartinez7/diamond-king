@@ -93,7 +93,7 @@ export default function ProductoPage() {
         </div>
 
         {/* Información del producto */}
-        <div className="space-y-6">
+        <div className="space-y-4">
           <div>
             <ShinyText
               className="text-4xl "
