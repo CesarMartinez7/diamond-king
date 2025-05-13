@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
-import { Heart, ShoppingBag } from "lucide-react";
+import { Icon } from "@iconify/react/dist/iconify.js";
 import ShinyText from "@/components/title";
 import PixelTransition from "@/components/PixelCard";
 import Whatsapp from "@/components/button-whats";
-
+import CardProduct from "@/components/card-product";
+import { AnimatedSubscribeButton } from "@/components/animated-favorite-button";
 const imagesArray = [
   {
     name: "dsf",
@@ -27,7 +28,7 @@ const imagesArray = [
 export default function ProductoPage() {
   return (
     <div className="container mx-auto px-4 py-8 text-[#AEAEAE] min-h-screen">
-        <Whatsapp/>
+      <Whatsapp />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8  min-h-svh place-content-center">
         {/* Galería de imágenes */}
         <div className="space-y-4">
@@ -74,9 +75,9 @@ export default function ProductoPage() {
             {/* */}
           </div>
           <div className="grid grid-cols-4 gap-2">
-            {imagesArray.map((image) => (
+            {imagesArray.map((image,idx) => (
               <div
-                key={image.name}
+                key={idx}
                 className="relative aspect-square cursor-pointer overflow-hidden rounded-md"
               >
                 <Image
@@ -119,9 +120,8 @@ export default function ProductoPage() {
               ].map((color, i) => (
                 <button
                   key={i}
-                  className={`w-8 h-8  ${color} ${
-                    i === 0 ? "ring-2 ring-black ring-offset-2" : ""
-                  }`}
+                  className={`w-8 h-8  ${color} ${i === 0 ? "ring-2 ring-black ring-offset-2" : ""
+                    }`}
                   aria-label={`Color ${i + 1}`}
                 />
               ))}
@@ -149,13 +149,14 @@ export default function ProductoPage() {
           {/* Botones de acción */}
           <div className="grid grid-cols-2 gap-4">
             <button className="px-8 py-2  rounded-md w-full justify-center-safe items-center-safe flex bg-gradient-to-b from-blue-500 to-blue-600 text-white focus:ring-2 focus:ring-blue-400 hover:shadow-xl transition duration-200 ">
-              <ShoppingBag className="mr-2 h-5 w-5" />
               Añadir al Carrito
             </button>
-            <button className="flex-1 bg-[#171717] text-white  py-3 px-4 rounded-md flex items-center justify-center">
-              <Heart className="mr-2 h-5 w-5" />
-              Favoritos
-            </button>
+            <AnimatedSubscribeButton className="bg-[#171717] text-white/70 w-full">
+              <span>Añadir storage
+                <Icon icon="tabler:heart" width="24" height="24" />
+              </span>
+              <span>Eliminar storage</span>
+            </AnimatedSubscribeButton>
           </div>
 
           {/* Información adicional */}
@@ -187,22 +188,7 @@ export default function ProductoPage() {
         <h2 className="text-2xl font-bold mb-6">También te puede gustar</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {imagesArray.map((i) => (
-            <div key={i.name} className=" overflow-hidden">
-              <div className="relative aspect-square">
-                <Image
-                  src={`${i.url}`}
-                  alt={`Producto relacionado ${i.name}`}
-                  fill
-                  className="object-cover transition-transform duration-300 hover:scale-105"
-                />
-              </div>
-              <div className="p-4">
-                <h3 className="font-medium truncate">
-                  Sueter de algodon {i.name}
-                </h3>
-                <p className="text-sm ">€24,99</p>
-              </div>
-            </div>
+            <CardProduct key={crypto.randomUUID()}  keyItem={crypto.randomUUID()} altImage={i.name} urlImage={i.url} name={i.name} price={i.name} />
           ))}
         </div>
       </div>
