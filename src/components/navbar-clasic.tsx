@@ -6,9 +6,6 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
 
 
-
-
-
 const navItems = [
     {
         name: "Tienda ",
@@ -28,7 +25,7 @@ export default function NavbarClassic() {
     const [isScrolledTop, setIsScrolledTop] = useState<boolean>(true)
     // const [valueInput, setValueInput] = useState<string>('');
     // const [isOpenInput, setIsOpenIput] = useState<boolean>(false)
-    
+
     const [isOpenSide, setIsOpenSide] = useState<boolean>(false)
 
     useEffect(() => {
@@ -71,11 +68,24 @@ export default function NavbarClassic() {
                     </AnimatedSubscribeButton>
                 </div>
             </div>
-            <div className={`bg-black/20 fixed z-50 shadow border border-primary-border rounded-md backdrop-blur-lg h-[50vh]  w-full ${isOpenSide ? "flex" : "hidden" } `}>
-            <AnimatedSubscribeButton onClick={() => setIsOpenSide(!isOpenSide)} className="bg-white text-black w-1.5 2xl:hidden xl:hidden lg:hidden">
-                        <span><Icon icon="tabler:menu-2" width="14" height="14" /></span>
-                        <span><Icon icon="tabler:x" width="16" height="16" /></span>
-                    </AnimatedSubscribeButton>
+            <div className={`bg-black/70 fixed z-50 shadow border border-primary-border rounded-md backdrop-blur-lg h-svh flex flex-col  px-4 py-8 w-full ${isOpenSide ? "flex" : "hidden"} `}>
+                <AnimatedSubscribeButton onClick={() => setIsOpenSide(!isOpenSide)} className="bg-white text-black w-0.5 2xl:hidden xl:hidden lg:hidden absolute right-3">
+                    <span><Icon icon="tabler:menu-2" width="14" height="14" /></span>
+                    <span><Icon icon="tabler:x" width="16" height="16" /></span>
+                </AnimatedSubscribeButton>
+
+                
+                <div>
+                    <ul className="flex flex-col gap-3">
+                        {navItems.map((navi,idx) => (
+                            <Link href={navi.link} key={idx}>
+                                {navi.name}
+                            </Link>
+                        ))}
+                    </ul>
+                </div>
+                    
+
             </div>
         </div>
     )

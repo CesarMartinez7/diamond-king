@@ -72,14 +72,14 @@ const Carousel: React.FC<CarouselProps> = ({
       {showControls && (
         <>
           <button 
-            className="absolute  left-2 top-1/2 z-10 -translate-y-1/2 bg-black/50 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-black/70 transition-all"
+            className="absolute  left-2 top-1/2 z-10 -translate-y-1/2 bg-black/50 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-black/70 transition-all cursor-pointer"
             onClick={prevSlide}
             aria-label="Anterior"
           >
             &#10094;
           </button>
           <button 
-            className="absolute right-2 top-1/2 z-10 -translate-y-1/2 bg-black/50 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-black/70 transition-all"
+            className="absolute right-2 top-1/2 z-10 -translate-y-1/2 bg-black/50 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-black/70 transition-all cursor-pointer"
             onClick={nextSlide}
             aria-label="Siguiente"
           >
@@ -98,11 +98,6 @@ const Carousel: React.FC<CarouselProps> = ({
           >
             {typeof item === 'string' ? (
                 <Image src={item} alt={`Slide ${index + 1}`} className='w-full h-full object-cover ' width={1500} height={1500} />
-            //   <img 
-            //     src={item} 
-            //     alt={`Slide ${index + 1}`} 
-            //     className="w-full h-full object-cover"
-            //   />
             ) : (
               <div className="w-full">
                 {item}
