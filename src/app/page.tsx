@@ -1,7 +1,7 @@
 
-import { ReviewComponents } from "@/components/review";
+// import { ReviewComponents } from "@/components/review";
 import { LayoutGrid } from "@/components/layout-grid";
-import { testimonials } from "@/components/review";
+// import { testimonials } from "@/components/review";
 import CardProduct from "@/components/card-product";
 import React from 'react';
 import Carousel from "@/components/carrusel";
