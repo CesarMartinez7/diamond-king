@@ -10,7 +10,7 @@ const App: React.FC = () => {
   const items = [
     "/PRESET/FOT_0026.jpg",
     "/PRESET/FOT_0044.jpg",
-    "/PRESET/FOT_0047.jpg",
+    "/WEB1.2.png",
     "/PRESET/FOT_0049.jpg",
     <div key={3} className="h-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
       <h2 className="text-4xl font-bold text-white">Slide Personalizado</h2>
