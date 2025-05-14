@@ -1,6 +1,7 @@
 // ❌ No pongas "use client" aquí
 
 import type { Metadata } from "next";
+import Head from "next/head";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Whatsapp from "@/components/button-whats";
@@ -27,9 +28,9 @@ export default function RootLayout({
   return (
 
     <html lang="en">
-      <head>
+      <Head>
          <meta name="theme-color" content="#000"/>
-      </head>
+      </Head>
       <body className={`${UbuntuFont.className}  antialiased relative fade`}>
         <NavbarClassic/>
         {children}
