@@ -12,10 +12,10 @@ const App: React.FC = () => {
     "/PRESET/FOT_0044.jpg",
     "/PRESET/FOT_0047.jpg",
     "/PRESET/FOT_0049.jpg",
-    <div key={crypto.randomUUID()} className="h-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+    <div key={3} className="h-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
       <h2 className="text-4xl font-bold text-white">Slide Personalizado</h2>
     </div>,
-    <div key={crypto.randomUUID()} className="h-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+    <div key={2} className="h-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
       <h2 className="text-4xl font-bold text-white">Slide Personalizado</h2>
     </div>
   ];
@@ -75,7 +75,7 @@ export default function Home() {
         <h3 className="text-primary-text font-semibold text-2xl  ">
           Reviews ⭐
         </h3>
-        <ReviewComponents items={testimonials} speed="slow" />
+        {/* <ReviewComponents items={testimonials} speed="slow" /> */}
       </div>
     </div>
   );
