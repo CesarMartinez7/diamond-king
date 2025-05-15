@@ -32,8 +32,9 @@
   }
 }
 
+
 .button-primary-dark{
-  @apply cursor-pointer hover:bg-primary-hover transition-all duration-200 p-2 rounded-md
+  @apply cursor-pointer hover:bg-primary-hover transition-all duration-200 p-2 rounded-md flex-row justify-center items-center flex flex-1 gap-3
 }
 
 :root {
