@@ -4,6 +4,7 @@ import Image from "next/image"
 import { AnimatedSubscribeButton } from "./animated-favorite-button";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
+import {motion} from "motion/react"
 
 
 const navItems = [
@@ -66,26 +67,30 @@ export default function NavbarClassic() {
                         <span><Icon icon="tabler:menu-2" width="14" height="14" /></span>
                         <span><Icon icon="tabler:x" width="16" height="16" /></span>
                     </AnimatedSubscribeButton>
+                    <button className="p-2">
+                    <Icon icon="tabler:shopping-cart" width="24" height="24" />
+                    </button>
+                
                 </div>
             </div>
-            <div className={`bg-black/70 fixed z-50 shadow border border-primary-border rounded-md backdrop-blur-lg h-svh flex flex-col  px-4 py-8 w-full ${isOpenSide ? "flex" : "hidden"} `}>
+            <motion.div whileInView={{opacity:1}} exit={{opacity: 0, scale: 0 }} initial={{opacity: 0}} className={`bg-black/70 fixed z-50 shadow backdrop-blur-lg h-svh flex flex-col  px-4 py-8 w-full ${isOpenSide ? "flex" : "hidden"} `}>
                 <AnimatedSubscribeButton onClick={() => setIsOpenSide(!isOpenSide)} className="bg-white text-black w-0.5 2xl:hidden xl:hidden lg:hidden absolute right-3">
                     <span><Icon icon="tabler:menu-2" width="14" height="14" /></span>
                     <span><Icon icon="tabler:x" width="16" height="16" /></span>
                 </AnimatedSubscribeButton>
-                <div>
+                <motion.div whileInView={{opacity:1}} initial={{opacity: 0}} >
                     <Image src={"/dk.png"} alt="dsd" width={80} className="h-[70px]" height={12} />
                     <ul className="flex flex-col gap-3">
                         {navItems.map((navi, idx) => (
-                            <Link href={navi.link} key={idx}>
+                            <Link href={navi.link} key={idx} className="w-full text-xl  p-2 rounded-md hover:backdrop-blur-lg duration-300">
                                 {navi.name}
                             </Link>
                         ))}
                     </ul>
-                </div>
+                </motion.div>
 
 
-            </div>
+            </motion.div>
         </div>
     )
 }

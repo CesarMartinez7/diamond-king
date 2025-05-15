@@ -35,7 +35,6 @@ export default function ProductoPage() {
   return (
     <div className="container mx-auto px-4 py-8 text-primary-text  bg-black/[0.96] min-h-screen ">
        <Meteors />
-      
       <Whatsapp />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8  min-h-svh place-content-center">
         {/* Galería de imágenes */}
@@ -48,15 +47,16 @@ export default function ProductoPage() {
               className="object-cover w-full h-full"
               priority
             />
-            
-            
           </div>
           <div className="flex gap-2">
             {imagesArray.map((image, idx) => (
               <div
                 key={idx}
-                className="relative aspect-square cursor-pointer "
+                className="relative aspect-square cursor-pointer"
               >
+                <div className="inset-0 absolute w-full h-full bg-gradient-to-t from-black/70 overflow-hidden to-transparent">
+
+                </div>
                 <Image
                   src={image.url}
                   alt={`Vista ${image.name}`}
@@ -73,14 +73,14 @@ export default function ProductoPage() {
         <div className="space-y-4">
           <div>
             <ShinyText
-              className="text-4xl "
+              className="lg:text-4xl text-2xl  "
               text="Camiseta de Algondo Premiun"
             ></ShinyText>
-            <div className="flex items-center mt-2 space-x-2"></div>
-            <p className="text-2xl font-bold mt-4">€49,999</p>
+            
+            <p className="text-2xl font-bold mt-2">€49,999 <span className="line-through text-xs text-current/50">€59,999</span></p>
           </div>
 
-          <p className="">
+          <p className="text-sm md:text-base">
             Camiseta de algodón 100% orgánico, perfecta para cualquier ocasión.
             Diseño minimalista y corte moderno que se adapta a todos los
             estilos.
@@ -116,7 +116,7 @@ export default function ProductoPage() {
               {["XS", "S", "M", "L", "XL"].map((size, i) => (
                 <button
                   key={i}
-                  className={`py-2 border text-xs border-primary-border hover:bg-primary-hover transition-colors  min-w-[48px] rorder-primary-border hover:bg- `}
+                  className={`py-2 border text-xs border-primary-border hover:bg-primary-hover transition-colors   min-w-[48px] rorder-primary-border b rounded-2xl `}
                 >
                   {size}
                 </button>
@@ -126,7 +126,7 @@ export default function ProductoPage() {
 
           {/* Botones de acción */}
           <div className="grid grid-cols-2 gap-4">
-            <button className="button-primary-dark border border-primary-border  shadow hover:shadow-black/10  text-md hover:scale-105 hover:rotate-1 ">
+            <button className="button-primary-dark border border-primary-border  shadow hover:shadow-black/10  text-md hover:scale-105 hover:rotate-1  bg-gradient-to-t from-black to-zinc-900 ">
               <Icon icon="tabler:building-store" width="24" height="24" />
               <span >Comprar</span>
             </button>
