@@ -154,8 +154,8 @@ export default function ProductoPage() {
       </div>
 
       {/* Productos relacionados */}
-      <div className="mt-16">
-        <h2 className="text-2xl font-bold mb-6">También te puede gustar</h2>
+      <div className="mt-10">
+        <h2 className="text-2xl bg-gradient-to-r from-primary-text to-zinc-900 bg-clip-text text-transparent mb-4">También te puede gustar</h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           {imagesArray.map((i) => (
             <CardProduct navigateTo={i.url} key={crypto.randomUUID()} keyItem={crypto.randomUUID()} altImage={i.name} urlImage={i.url} name={i.name} price={i.name} />
