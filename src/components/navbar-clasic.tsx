@@ -42,7 +42,7 @@ export default function NavbarClassic() {
 
     return (
         <div className="flex flex-col">
-            <div className={`flex flex-1  z-50 transition-all items-center duration-500 justify-between ${isScrolledTop ? "bg-black text-neutral-400 border-primary-border" : "text-neutral-200 backdrop-blur-xl transition-all shadow-2xl shadow-white/15"} text-sm fixed w-full z-40 md:px-12 `}   >
+            <div className={`flex flex-1 bg-black/55 z-50 transition-all items-center duration-500 justify-between ${isScrolledTop ? "bg-black text-neutral-400 border-primary-border" : "text-neutral-200 backdrop-blur-xl transition-all shadow-2xl shadow-white/15"} text-sm fixed w-full z-40 md:px-12 `}   >
                 <Link href={"/"} className="z-40">
                     <Image src={"/dk.png"} alt="dsd" width={80} className="h-[70px]" height={12} />
                 </Link>
@@ -54,9 +54,9 @@ export default function NavbarClassic() {
                 </nav>
 
                 <div className="flex flex-row gap-2  justify-center items-center">
-                    <div className="w-full max-w-sm min-w-[100px] rounded-md relative border border-[#2d2d2d] ">
+                    <div className={`w-full max-w-sm min-w-[100px] rounded-md relative border  ${!isScrolledTop ? "border-white/40" : "border-[#2d2d2d]"} `}>
                         <form >
-                            <input type="text" className="w-full p-2 bg-transparent text-sm   rounded-md border-border transition duration-300 ease focus:outline-none shadow-sm focus:shadow hover:scale-95" placeholder="Camiseta Premiun..." />
+                            <input type="text" className="w-full p-2 bg-transparent text-sm   rounded-md border-border transition duration-300 ease focus:outline-none shadow-sm focus:shadow hover:scale-95 placeholder:text-primary-text" placeholder="Camiseta Premiun..." />
                         </form>
                     </div>
                     <AnimatedSubscribeButton className="bg-white text-black w-1.5">
@@ -73,18 +73,17 @@ export default function NavbarClassic() {
                     <span><Icon icon="tabler:menu-2" width="14" height="14" /></span>
                     <span><Icon icon="tabler:x" width="16" height="16" /></span>
                 </AnimatedSubscribeButton>
-
-                
                 <div>
+                    <Image src={"/dk.png"} alt="dsd" width={80} className="h-[70px]" height={12} />
                     <ul className="flex flex-col gap-3">
-                        {navItems.map((navi,idx) => (
+                        {navItems.map((navi, idx) => (
                             <Link href={navi.link} key={idx}>
                                 {navi.name}
                             </Link>
                         ))}
                     </ul>
                 </div>
-                    
+
 
             </div>
         </div>
