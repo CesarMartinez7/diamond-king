@@ -47,9 +47,9 @@ export default function NavbarClassic() {
                     <Image src={"/dk.png"} alt="dsd" width={80} className="h-[70px] hover:scale-105 duration-300" height={12} />
                 </Link>
                 <nav className="md:hidden lg:hidden xl:flex hidden gap-6 absolute top-1/2 left-1/2 m-0 -translate-y-1/2 -translate-x-1/2">
-                    <div className="bg-red-500 h-full w-2.5" ></div>
+                    <div className=" h-full w-2.5" ></div>
                     {navItems.map((nav, idx) => (
-                        <Link className="cursor-pointer hover:bg-primary-hover transition-all duration-200 p-2 rounded-md" key={idx} href={nav.link} >{nav.name} </Link>
+                        <Link className="button-primary-dark" key={idx} href={nav.link} >{nav.name} </Link>
                     ))}
                 </nav>
 
@@ -66,6 +66,9 @@ export default function NavbarClassic() {
                         <span><Icon icon="tabler:menu-2" width="14" height="14" /></span>
                         <span><Icon icon="tabler:x" width="16" height="16" /></span>
                     </AnimatedSubscribeButton>
+                    <button className="button-primary-dark border border-primary-border" >
+                    <Icon icon="tabler:shopping-cart" width="24" height="24" />
+                    </button>
                 </div>
             </div>
             <div className={`bg-black/70 fixed z-50 shadow border border-primary-border rounded-md backdrop-blur-lg h-svh flex flex-col  px-4 py-8 w-full ${isOpenSide ? "flex" : "hidden"} `}>

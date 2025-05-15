@@ -7,6 +7,8 @@ import Whatsapp from "@/components/button-whats";
 import CardProduct from "@/components/card-product";
 import { AnimatedSubscribeButton } from "@/components/animated-favorite-button";
 import { Accordion, AccordionItem } from "@heroui/accordion";
+
+import { Meteors } from "@/components/meteors";
 const imagesArray = [
   {
     name: "dsf",
@@ -28,7 +30,9 @@ const imagesArray = [
 
 export default function ProductoPage() {
   return (
-    <div className="container mx-auto px-4 py-8 text-primary-text  min-h-screen ">
+    <div className="container mx-auto px-4 py-8 text-primary-text  bg-black/[0.96] min-h-screen ">
+       <Meteors />
+      
       <Whatsapp />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8  min-h-svh place-content-center">
         {/* Galería de imágenes */}
@@ -149,10 +153,11 @@ export default function ProductoPage() {
 
           {/* Botones de acción */}
           <div className="grid grid-cols-2 gap-4">
-            <button className="  border-primary-border duration-200 hover:border-b-5 p-2 flex  justify-center items-center rounded  border gap-2 ">
+            <button className="  border-primary-border duration-200 rounded-md border-b-5 p-2 flex  justify-center items-center   border gap-2 ">
               <Icon icon="tabler:building-store" width="24" height="24" />
               <span >Comprar</span>
             </button>
+            
             <AnimatedSubscribeButton className="bg-white text-black font-light w-full">
               <span className="inline-flex gap-2 justify-center items-center font-light text-sm">
                 <Icon icon="tabler:heart" width="20" height="20" />
@@ -180,7 +185,7 @@ export default function ProductoPage() {
         <h2 className="text-2xl font-bold mb-6">También te puede gustar</h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           {imagesArray.map((i) => (
-            <CardProduct key={crypto.randomUUID()} keyItem={crypto.randomUUID()} altImage={i.name} urlImage={i.url} name={i.name} price={i.name} />
+            <CardProduct navigateTo={i.url} key={crypto.randomUUID()} keyItem={crypto.randomUUID()} altImage={i.name} urlImage={i.url} name={i.name} price={i.name} />
           ))}
         </div>
       </div>
