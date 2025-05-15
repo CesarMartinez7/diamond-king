@@ -44,7 +44,7 @@ export default function NavbarClassic() {
         <div className="flex flex-col">
             <div className={`flex flex-1 bg-black/55 z-50 transition-all items-center duration-500 justify-between ${isScrolledTop ? "bg-black text-neutral-400 border-primary-border" : "text-neutral-200 backdrop-blur-xl transition-all shadow-2xl shadow-white/15"} text-sm fixed w-full z-40 md:px-12 `}   >
                 <Link href={"/"} className="z-40">
-                    <Image src={"/dk.png"} alt="dsd" width={80} className="h-[70px]" height={12} />
+                    <Image src={"/dk.png"} alt="dsd" width={80} className="h-[70px] hover:scale-105 duration-300" height={12} />
                 </Link>
                 <nav className="md:hidden lg:hidden xl:flex hidden gap-6 absolute top-1/2 left-1/2 m-0 -translate-y-1/2 -translate-x-1/2">
                     <div className="bg-red-500 h-full w-2.5" ></div>
