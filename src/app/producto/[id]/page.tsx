@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import ShinyText from "@/components/title";
-
 import CardProduct from "@/components/card-product";
 import { AnimatedSubscribeButton } from "@/components/animated-favorite-button";
 import { Accordion, AccordionItem } from "@heroui/accordion";
@@ -84,10 +82,10 @@ export default function ProductoPage() {
         {/* Información del producto */}
         <div className="space-y-4">
           <div>
-            <ShinyText
-              className="lg:text-4xl text-2xl  "
-              text="Camiseta de Algondo Premiun"
-            ></ShinyText>
+            
+
+<h4 className="lg:text-4xl text-2xl bg-gradient-to-t from-white to-slate-300 bg-clip-text text-transparent font-semibold text-shadow-current text-shadow-amber-20">Camiseta de Algodon Premiun</h4>
+            
             
             <p className="text-2xl font-bold mt-2">€49,999 <span className="line-through text-xs text-current/50">€59,999</span></p>
           </div>
@@ -138,13 +136,13 @@ export default function ProductoPage() {
 
           {/* Botones de acción */}
           <div className="grid grid-cols-2 gap-4">
-            <button className="button-primary-dark border border-primary-border  shadow hover:shadow-black/10  text-md hover:scale-105 hover:rotate-1  bg-gradient-to-t from-black to-zinc-900 ">
+            <button className="button-primary-dark border border-primary-border  shadow hover:shadow-black/10  text-md hover:scale-105 hover:rotate-1  bg-gradient-to-t from-black to-zinc-900 font-semibold ">
               <Icon icon="tabler:building-store" width="24" height="24" />
               <span >Comprar</span>
             </button>
             
             <AnimatedSubscribeButton className="bg-white text-black font-light w-full">
-              <span className="inline-flex gap-2 justify-center items-center font-light text-sm">
+              <span className="inline-flex gap-2 justify-center items-center font-semibold text-sm">
                 <Icon icon="tabler:heart" width="20" height="20" />
                 Añadir storage
               </span>
