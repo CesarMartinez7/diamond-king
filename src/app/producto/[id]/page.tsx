@@ -8,51 +8,55 @@ import { AnimatedSubscribeButton } from "@/components/animated-favorite-button";
 import { Accordion, AccordionItem } from "@heroui/accordion";
 import { Meteors } from "@/components/meteors";
 import { Lens } from "@/components/image-zoom";
-
-
-// const DynamicHeaders = dynamic(() => import("@/app/producto/[id]/page"), {
-//   loading: () => <div>Cargando</div>
-// })
-
-// export default function Page (){
-//   return <DynamicHeaders/>
-// }
-
+import { useState } from "react";
 
 const imagesArray = [
   {
-    name: "dsf",
-    url: "/camiseta.jpg",
+    name: "Camiseta ...",
+    url: "/DKSOLO.png",
+    alt:"sdfldskf",
+    price: "53999 ",
   },
   {
-    name: "dsf",
+    name: "Sueter",
     url: "/camiseta.jpg",
+    alt:"sdfldskf",
+    price: "249999 ",
   },
   {
-    name: "dsf",
+    name: "Camiseta Premiun",
     url: "/camiseta.jpg",
+    alt:"sdfldskf",
+    price: "443999 ",
   },
   {
-    name: "dsf",
+    name: "Camiseta estampado",
     url: "/camiseta.jpg",
+    alt:"sdfldskf",
+    price: "129999 ",
   },
   {
-    name: "dsf",
+    name: "Camiseta de buscador",
     url: "/camiseta.jpg",
+    alt:"sdfldskf",
+    price: "69999 ",
   },
 ];
 
 export default function ProductoPage() {
+
+
+  const [selectedImageUrl, setSelectedImageUrl] = useState<string>(imagesArray[0].url)
+
   return (
     <div className="container mx-auto px-4 py-8 text-primary-text  bg-black/[0.96] min-h-screen ">
-       <Meteors />
+       <Meteors /> 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8  min-h-svh place-content-center">
         {/* Galería de imágenes */}
         <div className="space-y-4 ">
           <div className="relative aspect-square overflow-hidden   max-w-md mx-auto  w-full ">
-          
             <Lens>
-              <img src="/camiseta.jpg" alt="" />
+              <img src={selectedImageUrl} alt="" />
             </Lens>
           </div>
           <div className="flex gap-2">
@@ -60,6 +64,7 @@ export default function ProductoPage() {
               <div
                 key={idx}
                 className="relative aspect-square cursor-pointer"
+                onClick={() => setSelectedImageUrl(image.url)}
               >
                 <div className="inset-0 absolute w-full h-full bg-gradient-to-t from-black/70 overflow-hidden to-transparent">
 
@@ -123,7 +128,7 @@ export default function ProductoPage() {
               {["XS", "S", "M", "L", "XL"].map((size, i) => (
                 <button
                   key={i}
-                  className={`py-2 border text-xs border-primary-border hover:bg-primary-hover transition-colors   min-w-[48px] rorder-primary-border b rounded-2xl `}
+                  className={`py-2 border text-xs border-primary-border hover:bg-primary-hover transition-colors   min-w-[48px] rorder-primary-border `}
                 >
                   {size}
                 </button>
@@ -165,7 +170,7 @@ export default function ProductoPage() {
         <h2 className="text-2xl bg-gradient-to-r from-primary-text to-zinc-900 bg-clip-text text-transparent mb-4">También te puede gustar</h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           {imagesArray.map((i) => (
-            <CardProduct navigateTo={i.url} key={crypto.randomUUID()} keyItem={crypto.randomUUID()} altImage={i.name} urlImage={i.url} name={i.name} price={i.name} />
+            <CardProduct navigateTo={i.url} key={crypto.randomUUID()} keyItem={crypto.randomUUID()} altImage={i.name} urlImage={i.url} name={i.name} price={i.price} />
           ))}
         </div>
       </div>

@@ -54,8 +54,8 @@ export default function NavbarClassic() {
 
 
     return (
-        <div className="flex flex-col">
-            <div className={`flex flex-1 bg-black/55 z-50 transition-all items-center duration-500 justify-between ${isScrolledTop ? "bg-black text-neutral-400 border-primary-border " : "text-neutral-200 backdrop-blur-xl transition-all shadow-2xl shadow-white/15"} text-sm fixed w-full z-40 md:px-12 `}   >
+        <div className="flex flex-col h-[56px]">
+            <div className={`flex flex-1 bg-black/70 z-50 transition-all items-center duration-500 justify-between mt-1 ${isScrolledTop ? "bg-black text-neutral-400 border-primary-border mt-0 " : "text-neutral-200 backdrop-blur-xl transition-all shadow-4xl shadow-white/15"} text-sm fixed w-full z-40 md:px-12 `}   >
                 <Link href={"/"} className="z-40">
                     <Image src={"/dk.png"} alt="dsd" width={80} className="h-[70px] hover:scale-105 duration-300" height={12} />
                 </Link>
