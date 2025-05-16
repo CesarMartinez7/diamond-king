@@ -137,7 +137,7 @@ export default function ProductoPage() {
           {/* Botones de acción */}
           <div className="grid grid-cols-2 gap-4">
             <button className="button-primary-dark border border-primary-border  shadow hover:shadow-black/10  text-md hover:scale-105 hover:rotate-1  bg-gradient-to-t from-black to-zinc-900 font-semibold ">
-              <Icon icon="tabler:building-store" width="24" height="24" />
+            <Icon icon="tabler:shopping-bag" width="20" height="20"   />
               <span >Comprar</span>
             </button>
             
