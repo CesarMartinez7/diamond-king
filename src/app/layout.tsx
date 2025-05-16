@@ -1,4 +1,4 @@
-// ❌ No pongas "use client" aquí
+
 
 import type { Metadata } from "next";
 import Head from "next/head";
@@ -26,11 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-
-    <html lang="en">
+    <html lang="es">
       <Head>
          <meta name="theme-color" content="#000"/>
-      </Head>
+      </Head>   
       <body className={`${UbuntuFont.className}  antialiased relative fade`}>
         <NavbarClassic/>
         {children}

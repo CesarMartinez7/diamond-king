@@ -7,6 +7,7 @@ import CardProduct from "@/components/card-product";
 import { AnimatedSubscribeButton } from "@/components/animated-favorite-button";
 import { Accordion, AccordionItem } from "@heroui/accordion";
 import { Meteors } from "@/components/meteors";
+import { Lens } from "@/components/image-zoom";
 
 
 // const DynamicHeaders = dynamic(() => import("@/app/producto/[id]/page"), {
@@ -49,13 +50,10 @@ export default function ProductoPage() {
         {/* Galería de imágenes */}
         <div className="space-y-4 ">
           <div className="relative aspect-square overflow-hidden   max-w-md mx-auto  w-full ">
-            <Image
-              src={"/camiseta.jpg"}
-              alt="Camiseta de algodón"
-              fill
-              className="object-cover w-full h-full"
-              priority
-            />
+          
+            <Lens>
+              <img src="/camiseta.jpg" alt="" />
+            </Lens>
           </div>
           <div className="flex gap-2">
             {imagesArray.map((image, idx) => (

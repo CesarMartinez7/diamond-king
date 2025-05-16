@@ -30,8 +30,6 @@ export default function NavbarClassic() {
 
     const [isScrolledTop, setIsScrolledTop] = useState<boolean>(true)
     const [valueInput, setValueInput] = useState<string>('');
-    
-
     const [isOpenSide, setIsOpenSide] = useState<boolean>(false)
 
     useEffect(() => {
