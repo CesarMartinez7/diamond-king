@@ -153,6 +153,7 @@ export default function ProductoPage() {
             <AccordionItem className="text-start text-pretty text-shiny  border-b border-primary-border" key="1" aria-label="Accordion 1" title="Descripcion">
             Esta camiseta de algodón premium está diseñada para ofrecer máxima comodidad y estilo ✨. El tejido de alta calidad garantiza durabilidad y una sensación suave al tacto 🚀. Perfecta para el uso diario o para ocasiones especiales ⭐.
             </AccordionItem>
+            
             <AccordionItem key="2" className="border-b border-primary-border" aria-label="Accordion 2" title="Detalles">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit consequuntur ipsa laborum obcaecati non cum fuga beatae error corporis assumenda!
             </AccordionItem>
@@ -162,7 +163,7 @@ export default function ProductoPage() {
           </Accordion>
         </div>
       </div>
-
+          
       {/* Productos relacionados */}
       <div className="mt-10">
         <h2 className="text-2xl bg-gradient-to-r from-primary-text to-zinc-900 bg-clip-text text-transparent mb-4">También te puede gustar</h2>
