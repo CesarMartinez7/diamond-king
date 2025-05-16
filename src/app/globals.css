@@ -18,6 +18,11 @@
 }
 
 
+::selection{
+  @apply bg-primary-hover text-white
+}
+
+
 @theme inline {
   --animate-rippling: rippling var(--duration) ease-out;
  

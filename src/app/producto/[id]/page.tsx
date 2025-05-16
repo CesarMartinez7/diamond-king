@@ -2,12 +2,22 @@
 import Image from "next/image";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import ShinyText from "@/components/title";
-import Whatsapp from "@/components/button-whats";
+
 import CardProduct from "@/components/card-product";
 import { AnimatedSubscribeButton } from "@/components/animated-favorite-button";
 import { Accordion, AccordionItem } from "@heroui/accordion";
-
 import { Meteors } from "@/components/meteors";
+
+
+// const DynamicHeaders = dynamic(() => import("@/app/producto/[id]/page"), {
+//   loading: () => <div>Cargando</div>
+// })
+
+// export default function Page (){
+//   return <DynamicHeaders/>
+// }
+
+
 const imagesArray = [
   {
     name: "dsf",
@@ -35,7 +45,6 @@ export default function ProductoPage() {
   return (
     <div className="container mx-auto px-4 py-8 text-primary-text  bg-black/[0.96] min-h-screen ">
        <Meteors />
-      <Whatsapp />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8  min-h-svh place-content-center">
         {/* Galería de imágenes */}
         <div className="space-y-4 ">
